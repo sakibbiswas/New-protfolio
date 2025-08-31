@@ -1,34 +1,3 @@
-// import React from 'react';
-// import picture from '../../assets/pic2.jpg';
-
-// const About: React.FC = () => {
-//   return (
-//     <div id="about" className="bg-pink-100 p-8">
-//       <div className="md:grid grid-cols-2 justify-center items-center gap-8">
-//         <img
-//           className="w-[500px] h-[500px] rounded-full"
-//           src={picture}
-//           alt="Sazzadur Rahman Sakib"
-//           data-aos="zoom-in-down"
-//           data-aos-easing="ease-out-cubic"
-//           data-aos-duration="2000"
-//         />
-
-//         <div className="space-y-4">
-//           <h2 className="text-4xl font-bold text-slate-800 mb-10">About Me</h2>
-// <h3 className="text-slate-800 text-xl font-semibold mb-4 leading-relaxed  text-justify [text-wrap:balance]">
-//   Hello, I am a Full Stack Web Developer with expertise in building modern, responsive, and scalable web applications. My technical skills include HTML, CSS, Bootstrap, Tailwind CSS, JavaScript (ES6+), React, Next.js, TypeScript,Redux , Firebase, Express.js, Node.js, MongoDB, PostgreSQL, JWT, Git, Netlify, Vercel, Google API, Figma, shadcn/ui, TanStack Query, and strong problem-solving abilities. I am passionate about creating efficient, user-friendly solutions and continuously learning new technologies to deliver high-quality applications.Thank you for taking the time to read this.I look forward to speaking with you if you have any opportunity for me. Feel free to ask me any questions. I am always here to respond. Thank you!
-// </h3>
-
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default About;
-
-
 
 import React from "react";
 import picture from "../../assets/pic2.jpg";
