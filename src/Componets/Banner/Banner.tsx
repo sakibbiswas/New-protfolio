@@ -1,0 +1,219 @@
+// import React from 'react';
+// import pic from '../../assets/pic (1).jpg';
+// import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+// import resume from '../../assets/Sazzadur Rahman Resume.pdf';
+// import { TypeAnimation } from 'react-type-animation';
+
+// const Banner: React.FC = () => {
+//   return (
+//     <div className="bg-pink-100">
+//       <div className="md:flex justify-center items-center gap-10 p-10">
+//         {/* Left Content */}
+//         <div className="space-y-3 mt-20">
+//           {/* Small Heading */}
+//           <h2 className="text-xl font-bold">
+//             <span className="text-red-600 text-xl ">----</span> Hello
+//           </h2>
+
+//           {/* Typing Animation */}
+//           <TypeAnimation
+//             sequence={[
+//               'I ',
+//               1000,
+//               'I am',
+//               500,
+//               'Sazzadur',
+//               500,
+//               'Sazzadur Rahman',
+//               1000,
+//               'Sazzadur Rahman Sakib',
+//               1000,
+//               'Sazzadur Rahman',
+//               500,
+//               'Sazzadur',
+//               500,
+//               '',
+//               500,
+//             ]}
+//             speed={40}
+//             repeat={Infinity}
+//             style={{ fontSize: '3em', fontWeight: 'bold' }}
+//           />
+
+//           {/* Description */}
+//           <h2 className="text-gray-800 text-xl  max-w-3xl leading-relaxed text-justify [text-wrap:balance]">
+//             This is <span className="font-bold">Sazzadur Rahman Sakib</span>, a passionate{' '}
+//             <span className="font-bold">Full Stack Developer (MERN)</span> and{' '}
+//             <span className="font-bold">UI/UX Designer</span> located in Bangladesh. I focus on
+//             building scalable, user-friendly, and modern digital solutions by blending clean code
+//             with intuitive design. With expertise in both frontend and backend, I’m always excited
+//             to explore opportunities around the world, where I can contribute my skills, grow with
+//             dynamic teams, and deliver innovative solutions.
+//           </h2>
+
+//           {/* Download Resume Button */}
+//           <a href={resume} download="Sazzadur_Rahman_Resume.pdf">
+//             <button className="mt-4 mb-20 flex items-center gap-2 px-6 py-3 rounded-lg text-white font-semibold 
+//               bg-gradient-to-r from-pink-500 to-red-500 hover:from-red-500 hover:to-pink-500 transition-all duration-300 shadow-lg">
+//               <FaDownload className="w-5 h-5" />
+//               <span>Download Resume</span>
+//             </button>
+//           </a>
+
+//           {/* Social Links */}
+//           <div className="md:flex justify-start items-center gap-8">
+//             <a href="https://github.com/sakibbiswas" target="_blank" rel="noopener noreferrer">
+//               <FaGithub className="w-10 h-8 hover:text-gray-700 transition-colors duration-300" />
+//             </a>
+//             <a
+//               href="https://www.facebook.com/profile.php?id=100089945906008"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <FaFacebook className="w-10 h-8 hover:text-blue-600 transition-colors duration-300" />
+//             </a>
+//             <a
+//               href="https://www.linkedin.com/in/sazzadur-rahman-sakib-3ab995280/"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <FaLinkedin className="w-10 h-8 hover:text-blue-500 transition-colors duration-300" />
+//             </a>
+//           </div>
+//         </div>
+
+//         {/* Right Side Image */}
+//         <img
+//           className="w-[500px] h-[500px] rounded-full shadow-xl"
+//           src={pic}
+//           alt="Sazzadur Rahman Sakib"
+//           data-aos="fade-up"
+//           data-aos-duration="3000"
+//         />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Banner;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import pic from '../../assets/pic (1).jpg';
+import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import resume from '../../assets/Sazzadur Rahman Resume.pdf';
+import { TypeAnimation } from 'react-type-animation';
+
+const Banner: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
+      <div className="max-w-7xl mx-auto md:flex justify-between items-center gap-10 px-6 py-16 md:py-24">
+        
+        {/* Left Content */}
+        <div className="space-y-6 md:w-1/2">
+          {/* Small Heading */}
+          <h2 className="text-lg font-semibold tracking-wide">
+            <span className="text-pink-500">----</span> Hello
+          </h2>
+
+          {/* Typing Animation */}
+          <TypeAnimation
+            sequence={[
+              'I am',
+              800,
+              'Sazzadur Rahman',
+              1200,
+              'Sazzadur Rahman Sakib',
+              1500,
+              'Full Stack Developer',
+              1500,
+              'UI/UX Designer',
+              1500,
+              '',
+              500,
+            ]}
+            speed={40}
+            repeat={Infinity}
+            className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"
+          />
+
+          {/* Description */}
+          <p className="text-gray-300 text-lg leading-relaxed max-w-2xl text-justify [text-wrap:balance]">
+            This is <span className="font-bold text-white">Sazzadur Rahman Sakib</span>, a passionate{" "}
+            <span className="font-bold text-white">Full Stack Developer (MERN)</span> and{" "}
+            <span className="font-bold text-white">UI/UX Designer</span> from Bangladesh.  
+            I specialize in building scalable, user-friendly, and modern web applications by blending{" "}
+            <span className="text-pink-400 font-semibold">clean code</span> with{" "}
+            <span className="text-red-400 font-semibold">intuitive design</span>.  
+            Always eager to learn and collaborate with dynamic teams, I focus on delivering innovative and impactful solutions.
+          </p>
+
+          {/* Download Resume Button */}
+          <a href={resume} download="Sazzadur_Rahman_Resume.pdf">
+            <button className="mt-6 flex items-center gap-3 px-7 py-3 rounded-lg text-lg font-semibold 
+              bg-gradient-to-r from-pink-500 to-red-500 hover:from-red-600 hover:to-pink-600 
+              shadow-lg hover:shadow-pink-500/40 transition-all duration-300">
+              <FaDownload className="w-5 h-5" />
+              <span>Download Resume</span>
+            </button>
+          </a>
+
+          {/* Social Links */}
+          <div className="flex gap-6 mt-6">
+            <a
+              href="https://github.com/sakibbiswas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 hover:text-pink-400 transition-colors duration-300 shadow-md"
+            >
+              <FaGithub className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100089945906008"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300 shadow-md"
+            >
+              <FaFacebook className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sazzadur-rahman-sakib-3ab995280/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 hover:text-blue-400 transition-colors duration-300 shadow-md"
+            >
+              <FaLinkedin className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+
+        {/* Right Side Image */}
+        <div className="mt-12 md:mt-0 md:w-1/2 flex justify-center" data-aos="fade-up" data-aos-duration="2000">
+          <img
+            className="w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full border-4 border-pink-500 shadow-lg shadow-pink-500/40 object-cover"
+            src={pic}
+            alt="Sazzadur Rahman Sakib"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Banner;
