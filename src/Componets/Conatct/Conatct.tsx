@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import type { FormEvent } from "react"; // ✅ type-only import
+import type { FormEvent } from "react"; 
 import { Mail, Phone, MapPin } from "lucide-react";
 import img from "../../assets/contact.6dcc16dbbb8757292805.png";
 import "aos/dist/aos.css";
