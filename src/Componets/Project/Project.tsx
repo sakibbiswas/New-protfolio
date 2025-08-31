@@ -125,7 +125,7 @@ import img8 from '../../assets/Screenshot_22.png';
 import img9 from '../../assets/Screenshot_23.png';
 import img10 from '../../assets/Screenshot_24.png';
 import img11 from '../../assets/Screenshot_28.png';
-import CustomScroll from './CustomScroll'; // keep the old scroll component
+import CustomScroll from './CustomScroll';
 
 interface ProjectProps {
   title: string;
@@ -137,27 +137,26 @@ interface ProjectProps {
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({ title, description, images, liveLink, clientLink, serverLink }) => (
-  <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl transition-transform duration-300 w-96 flex-shrink-0 flex flex-col">
-    
-    {/* ✅ Scrolling restored like the old code */}
-    <CustomScroll height="250px" className="p-2">
+  <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl transition-transform duration-300 w-full sm:w-80 md:w-96 flex-shrink-0 flex flex-col mb-6">
+    {/* Image Scroll */}
+    <CustomScroll height="200px" className="p-2">
       {images.map((img, idx) => (
         <img
           key={idx}
           src={img}
           alt={`${title} ${idx + 1}`}
-          className="w-[400px] h-[250px] object-cover rounded-xl shadow-md"
+          className="w-full h-[200px] object-cover rounded-xl shadow-md mb-2"
         />
       ))}
     </CustomScroll>
 
     {/* Card Content */}
-    <div className="p-5 flex flex-col justify-between flex-1 mt-4">
+    <div className="p-4 flex flex-col justify-between flex-1 mt-3">
       <div>
-        <h3 className="text-2xl font-semibold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
+        <h3 className="text-xl sm:text-2xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
           {title}
         </h3>
-        <ul className="list-disc list-inside mb-4 text-gray-200 space-y-1 text-sm md:text-base">
+        <ul className="list-disc list-inside mb-3 text-gray-200 space-y-1 text-xs sm:text-sm md:text-base">
           {description.map((desc, idx) => (
             <li key={idx}>{desc}</li>
           ))}
@@ -165,19 +164,19 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, images, liveL
       </div>
 
       {/* Action Buttons */}
-      <div className="flex flex-wrap gap-3 mt-4">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-2 mt-3">
         <a href={liveLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-          <button className="btn w-full bg-gradient-to-r from-pink-500 to-red-500 text-white hover:from-pink-600 hover:to-red-600 text-sm md:text-base">
+          <button className="btn w-full bg-gradient-to-r from-pink-500 to-red-500 text-white hover:from-pink-600 hover:to-red-600 text-sm sm:text-base">
             Live Preview
           </button>
         </a>
         <a href={clientLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-          <button className="btn w-full bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base">
+          <button className="btn w-full bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base">
             Client
           </button>
         </a>
         <a href={serverLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-          <button className="btn w-full bg-gray-600 hover:bg-gray-700 text-white text-sm md:text-base">
+          <button className="btn w-full bg-gray-600 hover:bg-gray-700 text-white text-sm sm:text-base">
             Server
           </button>
         </a>
@@ -230,21 +229,19 @@ const Project: React.FC = () => {
     <section id="projects" className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 py-16 px-4">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500 mb-3">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500 mb-3">
           Recent Projects
         </h2>
-        <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
+        <p className="text-gray-300 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto">
           Explore some of my recent projects built using modern technologies. Click on live preview to check them.
         </p>
       </div>
 
-      {/* Projects Horizontal Scroll */}
-      <div className="flex justify-center overflow-x-auto gap-6 px-2 py-2 scrollbar-hide">
-        <div className="flex gap-6">
-          {projects.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
-          ))}
-        </div>
+      {/* Projects Vertical on mobile, horizontal scroll on larger screens */}
+      <div className="flex flex-col md:flex-row md:overflow-x-auto gap-6">
+        {projects.map((project, idx) => (
+          <ProjectCard key={idx} {...project} />
+        ))}
       </div>
     </section>
   );
