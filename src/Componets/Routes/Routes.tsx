@@ -10,7 +10,7 @@ const routes: RouteObject[] = [
     element: <Main />,
     children: [
       {
-        index: true, // Use index route instead of repeating path "/"
+        index: true, 
         element: <Home />,
       },
     ],
