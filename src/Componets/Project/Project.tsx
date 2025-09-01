@@ -111,12 +111,11 @@
 
 
 
-
-
 import React from 'react';
-import img1 from '../../assets/scroll-2.png';
-import img2 from '../../assets/scoll-1.png';
-import img3 from '../../assets/Screenshot_15.png';
+import img1 from '../../assets/ride-2.png';
+import img2 from '../../assets/ride-1.png';
+import img3 from '../../assets/ride-3.png';
+import img12 from '../../assets/ride-4.png';
 import img4 from '../../assets/Screenshot_25.png';
 import img5 from '../../assets/Screenshot_26.png';
 import img6 from '../../assets/Screenshot_27.png';
@@ -137,21 +136,22 @@ interface ProjectProps {
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({ title, description, images, liveLink, clientLink, serverLink }) => (
-  <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl transition-transform duration-300 w-full sm:w-80 md:w-96 flex-shrink-0 flex flex-col mb-6">
+  <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl transition-transform duration-300 w-full sm:w-[320px] md:w-[380px] flex-shrink-0 flex flex-col mb-6 min-h-[580px]">
+    
     {/* Image Scroll */}
-    <CustomScroll height="200px" className="p-2">
+    <CustomScroll height="250px" className="p-2">
       {images.map((img, idx) => (
         <img
           key={idx}
           src={img}
           alt={`${title} ${idx + 1}`}
-          className="w-full h-[200px] object-cover rounded-xl shadow-md mb-2"
+          className="w-full h-[250px] object-cover rounded-xl mb-3"
         />
       ))}
     </CustomScroll>
 
     {/* Card Content */}
-    <div className="p-4 flex flex-col justify-between flex-1 mt-3">
+    <div className="p-4 flex flex-col justify-between flex-1">
       <div>
         <h3 className="text-xl sm:text-2xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
           {title}
@@ -188,23 +188,23 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, images, liveL
 const Project: React.FC = () => {
   const projects: ProjectProps[] = [
     {
-      title: "Food Hunter",
+      title: "RideX",
       description: [
-        "Single page application showcasing chefs and their popular recipes worldwide.",
-        "Search your favorite chef by country and see their recipes.",
-        "Secure API integration with polished UI/UX.",
+        "Login & Roles – JWT login for Rider, Driver, Admin (Driver needs Admin approval, demo: admin@gmail.com pass: admin123).",
+        "Ride Flow – Rider books with pickup/destination → fare estimate → confirm; Driver accepts & updates status; Admin monitors.",
+        "Dashboards – Rider: book & history, Driver: manage rides/availability, Admin: oversee users, drivers & analytics.",
       ],
-      images: [img2, img1, img3],
-      liveLink: "https://chef-recipe-client-8ef77.web.app/country/0",
-      clientLink: "https://github.com/sakibbiswas/chef-recipe-client",
-      serverLink: "https://github.com/sakibbiswas/chef-recipe-server"
+      images: [img2, img1, img3, img12],
+      liveLink: "https://ride-frontend-one.vercel.app/",
+      clientLink: "https://github.com/sakibbiswas/Ride-booking-frontend",
+      serverLink: "https://github.com/sakibbiswas/Ride-booking"
     },
     {
       title: "Toy Shop",
       description: [
-        "MERN-based e-commerce platform for managing products and toys.",
-        "Users can add, edit, and manage their products easily.",
-        "Admin can manage users and products securely via dashboard.",
+        "MERN E-commerce – Web app using MongoDB, Express, React & Node.js for managing toys and products.",
+        "User Features – Add, edit, and manage products easily via a simple interface.",
+        "Admin Features – Secure dashboard to manage users, products, and platform oversight."
       ],
       images: [img4, img5, img6, img11],
       liveLink: "https://toy-marketplace-client-d8225.web.app/",
@@ -237,8 +237,8 @@ const Project: React.FC = () => {
         </p>
       </div>
 
-      {/* Projects Vertical on mobile, horizontal scroll on larger screens */}
-      <div className="flex flex-col md:flex-row md:overflow-x-auto gap-6">
+      {/* Projects Layout */}
+      <div className="flex flex-col md:flex-row md:overflow-x-auto gap-6 justify-center items-start">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} {...project} />
         ))}
@@ -248,4 +248,6 @@ const Project: React.FC = () => {
 };
 
 export default Project;
+
+
 

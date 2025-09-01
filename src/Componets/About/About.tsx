@@ -61,13 +61,7 @@ const About: React.FC = () => {
 
           {/* Call-to-Action Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="/resume.pdf"
-              download
-              className="px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300"
-            >
-              📄 Download CV
-            </a>
+       
             <a
               href="#contact"
               className="px-6 py-3 rounded-full border border-pink-500 text-pink-400 font-semibold hover:bg-pink-500/10 hover:text-white transition duration-300"

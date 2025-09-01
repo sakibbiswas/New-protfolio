@@ -2,7 +2,7 @@
 import React from 'react';
 import pic from '../../assets/pic (1).jpg';
 import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
-import resume from '../../assets/Sazzadur Rahman Resume.pdf';
+import resume from '../../assets/Sazzadur Rhaman Resume.pdf';
 import { TypeAnimation } from 'react-type-animation';
 
 const Banner: React.FC = () => {
@@ -50,7 +50,7 @@ const Banner: React.FC = () => {
           </p>
 
           {/* Download Resume Button */}
-          <a href={resume} download="Sazzadur_Rahman_Resume.pdf">
+          <a href={resume} download="Sazzadur Rhaman Resume.pdf">
             <button className="mt-6 flex items-center gap-3 px-7 py-3 rounded-lg text-lg font-semibold 
               bg-gradient-to-r from-pink-500 to-red-500 hover:from-red-600 hover:to-pink-600 
               shadow-lg hover:shadow-pink-500/40 transition-all duration-300">
