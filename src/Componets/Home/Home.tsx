@@ -7,11 +7,14 @@ import Project from '../Project/Project';
 import Contact from '../Conatct/Conatct';
 import Testimonial from '../Testimonial/Testimonial';
 import Hire from '../Hire/Hire';
+import BlogSection from '../Blog/BlogSection';
+import Education from '../Education/Education';
 
 const Home: React.FC = () => {
   return (
     <div>
       <Banner />
+      <Education/>
       <About />
       <Skils/>
       <Expertise />
@@ -19,6 +22,7 @@ const Home: React.FC = () => {
       <Testimonial />
       <Hire />
       <Contact />
+      <BlogSection/>
     </div>
   );
 };
